@@ -1,0 +1,27 @@
+main {
+    margin: 1rem;
+    padding: 1rem 1.25rem 1rem 1.75rem;
+    background-color: #d6d6d6;
+    border-radius: 1rem;
+}
+
+h1 { text-align: center; font-size: 2.25rem; }
+
+li { margin-bottom: 0.55rem; }
+
+li p { margin-block-start: 0.10rem; margin-block-end: 0.35rem; }
+
+.tx-codigo {
+    display: block;
+    width: max-content; /* Se ajusta solo al ancho del texto */
+    color: #813600;
+    background-color: rgb(255, 181, 128, 0.35);
+    padding: 0.10rem 0.45em 0.15rem;
+    border-radius: 0.35rem;
+}
+
+.negrita { font-weight: 600; }
+
+.identificacion { color: #1212ff; font-weight: 700; }
+
+.solucion { color: #00006e; font-weight: 700; }
