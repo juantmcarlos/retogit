@@ -294,7 +294,7 @@
             </li>
 
             <li>Nos movemos a la rama vista-2-web:
-                <p>Ahora se usa git switch &lt;nombre&gt;, pero Git anteriores a 2.23 se usaba git checkout &lt;nombre&gt;</p>
+                <p>Ahora se usa git switch &lt;nombre&gt;, pero Git anteriores a 2.23 se usaba git checkout &lt;nombre&gt;</p><br>
 
                 <span class="tx-codigo"># mover el proyecto a la rama vista-2-web</span>
                 <span class="tx-codigo">git switch vista-2-web</span>
@@ -312,9 +312,43 @@
             </li>
 
             <li>Unir la rama "vista-2-web" con la rama principal "main":
-                <span class="tx-codigo"># Hacer un merge de la rama vista-2-web</span>
-                <span class="tx-codigo">git merge vista-2-web</span>
+                <p>Pasos a seguir:</p><br>
 
+                <ol>
+                    <li>Cambia a la rama principal (main)
+                        <span class="tx-codigo"># Asegúrate de estar en main</span>
+                        <span class="tx-codigo">git switch main    # o: git checkout main</span>
+                    </li>
+
+                    <li>Actualiza tu copia local de main (opcional pero recomendado)
+                        <p>Si otros colaboradores pueden haber hecho cambios en main, trae los últimos commits:</p>
+
+                        <span class="tx-codigo"># actualiza tu rama local con la remota</span>
+                        <span class="tx-codigo">git pull origin main</span><br>
+
+                        <p>Si no hay cambios, Git te dirá "Already up to date."</p>
+                    </li>
+
+                    <li>Fusiona (merge) la rama de trabajo
+                        <span class="tx-codigo"># Hacer un merge de la rama vista-2-web</span>
+                        <span class="tx-codigo">git merge vista-2-web</span><br>
+
+                        <p>Si todo encaja sin conflictos, Git creará automáticamente un commit de merge y terminará.</p><br>
+
+                        <p>Si aparecen conflictos, Git marcará los archivos afectados. Tendrás que editarlos, resolverlos y luego:</p>
+
+                        <span class="tx-codigo">git add &lt;archivo_resuelto&gt;</span><br>
+                        
+                        <span class="tx-codigo"># Una vez resueltos todos:</span>
+                        <span class="tx-codigo">git commit    # finaliza el merge</span>
+                    </li>
+
+                    <li>Empuja la rama main actualizada al remoto
+                        <span class="tx-codigo">git push origin main</span><br>
+
+                        <p>Ahora la rama remota main contiene también los cambios de vista-2-web.</p>
+                    </li>
+                </ol>
             </li>
 
             <li>Hacer que un proyecto de github público de una web se pueda ver desde internet. Pasos detallados:
