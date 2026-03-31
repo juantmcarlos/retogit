@@ -253,7 +253,7 @@
                 <span class="tx-codigo">git push -u origin main    # empuja la rama principal y configura upstream</span>
             </li>
             
-            <li>Verificar los subido:
+            <li>Verificar lo subido:
                 <span class="tx-codigo"># Comprueba ramas locales y remotas</span>
                 <span class="tx-codigo">git branch -a</span><br>
 
@@ -262,6 +262,71 @@
 
                 <span class="tx-codigo"># Consulta el estado del push</span>
                 <span class="tx-codigo">gh repo view --web    # abre tu repositorio en el navegador</span>
+            </li>
+
+            <li>Después de crear ficheros base del proyecto staging = área de preparación:
+                <span class="tx-codigo"># coloca todos los ficheros en el staging</span>
+                <span class="tx-codigo">git add .</span><br>
+
+                <span class="tx-codigo"># confirmar ficheros del staging</span>
+                <span class="tx-codigo">git commit -m "ficheros base del proyecto"</span><br>
+
+                <span class="tx-codigo"># subir los ficheros al repositorio remoto</span>
+                <span class="tx-codigo">git push</span><br>
+
+                <span class="tx-codigo"># Si no estamos identificados con el Repositorio de GitHub:</span>
+                <span class="tx-codigo">gh auth login</span><br>
+
+                <span class="tx-codigo"># Consulta el estado del push</span>
+                <span class="tx-codigo">gh repo view --web    # abre tu repositorio en el navegador</span><br>
+            </li>
+
+            <li>Crear una nueva rama que se derive de la principal:
+                <span class="tx-codigo"># Crear la rama vista-2-web</span>
+                <span class="tx-codigo">git branch vista-2-web</span><br>
+
+                <span class="tx-codigo"># Ver las ramas del repositorio local</span>
+                <span class="tx-codigo">git Branch</span><br>
+
+                <span class="tx-codigo"># Ver todas las ramas de local y remoto</span>
+                <span class="tx-codigo">git branch -a</span><br>
+
+            </li>
+
+            <li>Nos movemos a la rama vista-2-web:
+                <p>Ahora se usa git switch &lt;nombre&gt;, pero Git anteriores a 2.23 se usaba git checkout &lt;nombre&gt;</p>
+
+                <span class="tx-codigo"># mover el proyecto a la rama vista-2-web</span>
+                <span class="tx-codigo">git switch vista-2-web</span>
+            </li>
+
+            <li>Después de crear más ficheros y modificaciones:
+                <span class="tx-codigo"># coloca todos los ficheros en el staging</span>
+                <span class="tx-codigo">git add .</span><br>
+
+                <span class="tx-codigo"># confirmar ficheros del staging</span>
+                <span class="tx-codigo">git commit -m "modificaciones en index.html y style.css"</span><br>
+
+                <span class="tx-codigo"># subir los ficheros al repositorio remoto</span>
+                <span class="tx-codigo">git push</span><br>
+            </li>
+
+            <li>Unir la rama "vista-2-web" con la rama principal "main":
+                <span class="tx-codigo"># Hacer un merge de la rama vista-2-web</span>
+                <span class="tx-codigo">git merge vista-2-web</span>
+
+            </li>
+
+            <li>Hacer que un proyecto de github público de una web se pueda ver desde internet. Pasos detallados:
+                <ol>
+                    <li>Verificar visibilidad: Asegúrate de que el repositorio sea público.</li>
+                    <li>Ir a Configuración: En tu repositorio, haz clic en Settings.</li>
+                    <li>Configurar Pages: En la barra lateral izquierda, bajo "Code and automation", haz clic en Pages.</li>
+                    <li>Seleccionar fuente: En "Build and deployment" > "Source", asegúrate de que esté seleccionado "Deploy from a branch".</li>
+                    <li>Rama: En "Branch", selecciona main (o master) y la carpeta / (root).</li>
+                    <li>Guardar: Haz clic en Save.</li>
+                    <li>Acceder: Espera unos minutos y GitHub te proporcionará una URL (generalmente usuario.github.io/repositorio) donde tu sitio web estará en vivo.</li>
+                </ol>
             </li>
         </ol>
 
@@ -699,5 +764,6 @@
             Al enfrentarte a problemas y errores en Git, es importante mantener la calma y buscar soluciones de manera sistemática. Utiliza los recursos de la comunidad Git, como documentación oficial, foros en línea y tutoriales, para obtener ayuda adicional y resolver los problemas de manera efectiva.
         </p>
     </main>
+    <p class="autor">@juantmcarlos</p>
 </body>
 </html>
